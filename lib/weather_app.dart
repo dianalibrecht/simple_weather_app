@@ -1,13 +1,20 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:simple_weather_app/weather_data.dart';
+import 'package:simple_weather_app/weather_repository.dart';
 
 class WeatherApp extends StatelessWidget {
-  const WeatherApp({super.key, required this.city});
+  const WeatherApp({super.key, required this.repository});
 
-  final WeatherData city;
+  final WeatherRepository repository;
 
   @override
   Widget build(BuildContext context) {
+    final WeatherData city = repository.getWeather();
+    final double temperature = city.temperature;
+    final String weatherCondition = city.weatherCondition;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Weather App",
