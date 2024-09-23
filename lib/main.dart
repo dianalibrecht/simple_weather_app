@@ -20,8 +20,9 @@ class WeatherApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(),
-    );
+    return Scaffold(
+        appBar: AppBar(
+      title: const Text("Simple Weather App"),
+    ));
   }
 }
