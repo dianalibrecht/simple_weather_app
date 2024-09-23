@@ -22,10 +22,12 @@ class WeatherApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("weather app"),
+        title: const Text("Weather App",
+            style: TextStyle(
+                fontSize: 24, color: Colors.blue, fontWeight: FontWeight.bold)),
       ),
-      body: Center(
-        child: const Column(
+      body: const Center(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
@@ -33,10 +35,15 @@ class WeatherApp extends StatelessWidget {
               style: TextStyle(
                 color: Colors.blue,
                 fontSize: 24,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            Text("Bielefeld, 30 Grad, Gewitter"),
-            Text("Heilbronn, 25 Grad, Sonnig"),
+            Text("Bielefeld",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+            Text(" 30 Grad, Gewitter"),
+            Text("Heilbronn ",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+            Text("25 Grad, Sonnig"),
           ],
         ),
       ),
