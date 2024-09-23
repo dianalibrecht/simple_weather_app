@@ -24,13 +24,20 @@ class WeatherApp extends StatelessWidget {
       appBar: AppBar(
         title: const Text("weather app"),
       ),
-      body: Container(
-        child: const Text(
-          "Willkommen zur Weather App!",
-          style: TextStyle(
-            color: Colors.blue,
-            fontSize: 24,
-          ),
+      body: Center(
+        child: const Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Willkommen zur Weather App!",
+              style: TextStyle(
+                color: Colors.blue,
+                fontSize: 24,
+              ),
+            ),
+            Text("Bielefeld, 30 Grad, Gewitter"),
+            Text("Heilbronn, 25 Grad, Sonnig"),
+          ],
         ),
       ),
     );
